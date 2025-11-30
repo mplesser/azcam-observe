@@ -1,0 +1,29 @@
+[project]
+name = "azcam-observe"
+version = "25.0"
+description = "Observing scripts for the azcam package"
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["ccd", "imaging", "astronomy", "sensors"]
+authors = [{ name = "Michael Lesser" }, { email = "mlesser@arizona.edu" }]
+dependencies = [
+    "azcam",
+    "azcam-console",
+    "pyside6",
+    "mkdocstrings[python]>=0.18",
+]
+requires-python = ">= 3.10"
+
+[project.urls]
+Documentation = "https://azcam.readthedocs.io/"
+Repository = "https://github.com/mplesser/azcam-observe/"
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "azcam_console"
+
+[project.scripts]
+azcamobserve = "azcam_observe.observe.__main__:main"
