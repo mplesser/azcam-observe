@@ -6,12 +6,7 @@ license = { file = "LICENSE" }
 readme = "README.md"
 keywords = ["ccd", "imaging", "astronomy", "sensors"]
 authors = [{ name = "Michael Lesser" }, { email = "mlesser@arizona.edu" }]
-dependencies = [
-    "azcam",
-    "azcam-console",
-    "pyside6",
-    "mkdocstrings[python]>=0.18",
-]
+dependencies = ["azcam", "azcam-console", "pyside6"]
 requires-python = ">= 3.10"
 
 [project.urls]
@@ -23,7 +18,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.module]
-name = "azcam_console"
+name = "azcam_observe"
 
 [project.scripts]
 azcamobserve = "azcam_observe.observe.__main__:main"
